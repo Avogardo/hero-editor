@@ -15,18 +15,28 @@ exports.Hero = Hero;
 var AppComponent = (function () {
     function AppComponent() {
         this.title = 'Tour of Heroes';
-        this.hero = {
-            id: 1,
-            name: 'Windstorm',
-        };
+        this.heroes = HEROES;
     }
     return AppComponent;
 }());
 AppComponent = __decorate([
     core_1.Component({
         selector: 'my-app',
-        template: "\n\t  <h1>{{title}}</h1>\n\t  <h2>{{hero.name}} details!</h2>\n\t  <div><label>id: </label>{{hero.id}}</div>\n\t  <div>\n\t\t  <label>name: </label>\n\t\t  <input [(ngModel)]=\"hero.name\" placeholder=\"name\">\n\t\t</div>\n  ",
+        templateUrl: './app.component.html',
+        styleUrls: ['./app.component.css'],
     })
 ], AppComponent);
 exports.AppComponent = AppComponent;
+var HEROES = [
+    { id: 11, name: 'Maria Rokita' },
+    { id: 12, name: 'Twoja mloda' },
+    { id: 13, name: 'Sweter z golfem' },
+    { id: 14, name: 'abuK' },
+    { id: 15, name: 'Marietta' },
+    { id: 16, name: 'Gruby Ozi' },
+    { id: 17, name: 'Dynamo' },
+    { id: 18, name: 'Q z Bonda' },
+    { id: 19, name: 'Zer0an0nim' },
+    { id: 20, name: 'Cassia' }
+];
 //# sourceMappingURL=app.component.js.map
