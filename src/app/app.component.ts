@@ -1,9 +1,5 @@
-import { Component } from '@angular/core';
-
-export class Hero {
-  id: number;
-  name: string;
-}
+import { Component, Input } from '@angular/core';
+import { Hero } from './hero';
 
 @Component({
   selector: 'my-app',
