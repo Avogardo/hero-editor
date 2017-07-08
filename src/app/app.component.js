@@ -17,6 +17,9 @@ var AppComponent = (function () {
         this.title = 'Tour of Heroes';
         this.heroes = HEROES;
     }
+    AppComponent.prototype.onSelect = function (hero) {
+        this.selectedHero = hero;
+    };
     return AppComponent;
 }());
 AppComponent = __decorate([
