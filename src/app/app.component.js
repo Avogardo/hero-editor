@@ -5,14 +5,24 @@ var __decorate = (this && this.__decorate) || function (decorators, target, key,
     else for (var i = decorators.length - 1; i >= 0; i--) if (d = decorators[i]) r = (c < 3 ? d(r) : c > 3 ? d(target, key, r) : d(target, key)) || r;
     return c > 3 && r && Object.defineProperty(target, key, r), r;
 };
+var __metadata = (this && this.__metadata) || function (k, v) {
+    if (typeof Reflect === "object" && typeof Reflect.metadata === "function") return Reflect.metadata(k, v);
+};
 var core_1 = require("@angular/core");
+var hero_service_1 = require("./hero-detail/hero.service");
 var AppComponent = (function () {
-    function AppComponent() {
+    function AppComponent(heroService) {
+        this.heroService = heroService;
         this.title = 'Tour of Heroes';
-        this.heroes = HEROES;
     }
+    AppComponent.prototype.ngOnInit = function () {
+        this.getHeroes();
+    };
     AppComponent.prototype.onSelect = function (hero) {
         this.selectedHero = hero;
+    };
+    AppComponent.prototype.getHeroes = function () {
+        this.heroes = this.heroService.getHeroes();
     };
     return AppComponent;
 }());
@@ -21,19 +31,9 @@ AppComponent = __decorate([
         selector: 'my-app',
         templateUrl: './app.component.html',
         styleUrls: ['./app.component.css'],
-    })
+        providers: [hero_service_1.HeroService],
+    }),
+    __metadata("design:paramtypes", [hero_service_1.HeroService])
 ], AppComponent);
 exports.AppComponent = AppComponent;
-var HEROES = [
-    { id: 11, name: 'Maria Rokita' },
-    { id: 12, name: 'Twoja mloda' },
-    { id: 13, name: 'Sweter z golfem' },
-    { id: 14, name: 'abuK' },
-    { id: 15, name: 'Marietta' },
-    { id: 16, name: 'Gruby Ozi' },
-    { id: 17, name: 'Dynamo' },
-    { id: 18, name: 'Q z Bonda' },
-    { id: 19, name: 'Zer0an0nim' },
-    { id: 20, name: 'Cassia' }
-];
 //# sourceMappingURL=app.component.js.map
