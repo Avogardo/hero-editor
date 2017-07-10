@@ -12,6 +12,7 @@ var router_1 = require("@angular/router");
 var app_component_1 = require("./app.component");
 var hero_detail_component_1 = require("./hero-detail/hero-detail.component");
 var heroes_component_1 = require("./heroes-list/heroes.component");
+var dashboard_component_1 = require("./dashboard/dashboard.component");
 var hero_service_1 = require("./hero-detail/hero.service");
 var AppModule = (function () {
     function AppModule() {
@@ -25,10 +26,13 @@ AppModule = __decorate([
             forms_1.FormsModule,
             router_1.RouterModule.forRoot([
                 { path: 'heroes', component: heroes_component_1.HeroesComponent },
+                { path: 'dashboard', component: dashboard_component_1.DashboardComponent },
+                { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
             ])
         ],
         declarations: [
             app_component_1.AppComponent,
+            dashboard_component_1.DashboardComponent,
             hero_detail_component_1.HeroDetailComponent,
             heroes_component_1.HeroesComponent,
         ],
