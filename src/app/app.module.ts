@@ -10,7 +10,6 @@ import { DashboardComponent }  from './dashboard/dashboard.component';
 import { HeroService }         from './hero-detail/hero.service';
 
 
-
 @NgModule({
   imports: [
     BrowserModule,
