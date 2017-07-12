@@ -5,6 +5,7 @@ import {
 } from '@angular/core';
 import { ActivatedRoute, ParamMap } from '@angular/router';
 import { Location }                 from '@angular/common';
+import { Hero } from './hero';
 import 'rxjs/add/operator/switchMap';
 
 import { HeroService } from './hero.service';
