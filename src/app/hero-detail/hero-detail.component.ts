@@ -14,6 +14,7 @@ import { HeroService } from './hero.service';
 @Component({
   selector: 'hero-detail',
   templateUrl: './hero-detail.component.html',
+  styleUrls: ['./hero-detail.component.css'],
 })
 
 export class HeroDetailComponent implements OnInit {
@@ -23,7 +24,7 @@ export class HeroDetailComponent implements OnInit {
     private location: Location,
   ) {}
 
-  @Input() hero: Hero;
+  hero: Hero;
 
   ngOnInit(): void {
     this.route.paramMap
